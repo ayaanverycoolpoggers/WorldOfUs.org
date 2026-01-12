@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us – WorldOfUs</title>
+
+<style>
+/* ---------- ROOT COLORS ---------- */
+:root {
+    --deep-ocean: #001f33;
+    --mid-ocean: #003d66;
+    --light-ocean: #0a6fa6;
+    --aqua: #4fc3f7;
+    --white: #ffffff;
+}
+
+/* ---------- GLOBAL ---------- */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--white);
+    background: linear-gradient(
+        to bottom,
+        #001f33 0%,
+        #003d66 40%,
+        #0a6fa6 100%
+    );
+}
+
+a {
+    color: var(--aqua); /* FIX: make links consistent with homepage */
+    text-decoration: none;
+}
+
+/* ---------- HEADER ---------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 70px;
+    background: rgba(0, 20, 40, 0.75);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.logo img {
+    height: 85px;
+}
+
+nav a {
+    margin-left: 30px;
+    font-weight: 600;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: var(--aqua);
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+    text-align: center;
+    padding: 120px 20px 80px;
+}
+
+.hero h1 {
+    font-size: 56px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 22px;
+    color: #d6f2ff;
+}
+
+/* ---------- CONTENT CARD ---------- */
+.content {
+    max-width: 1000px;
+    margin: 0 auto 120px;
+    padding: 50px;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(16px);
+    border-radius: 28px;
+    animation: fadeUp 1.4s ease;
+}
+
+.content h2 {
+    font-size: 40px;
+    margin-bottom: 25px;
+    color: var(--aqua);
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #eefbff;
+}
+
+/* ---------- ANIMATION ---------- */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #00111f;
+    font-size: 14px;
+    color: #b7e7ff;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+    header {
+        padding: 20px 30px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .content {
+        padding: 35px 25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER SECTION -->
+<header>
+    <!-- LOGO LINKS TO HOME -->
+    <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="WorldOfUs Logo">
+        <h2>WorldOfUs</h2>
+    </a>
+
+    <!-- FIXED NAV: consistent labels + links -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products & Services</a>
+        <a href="contact.html">Contact</a> <!-- FIXED link -->
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>About WorldOfUs</h1>
+    <p>Turning concern into action — one body of water at a time.</p>
+</section>
+
+<!-- SECTION 1: HISTORY & PITCH -->
+<section class="content">
+    <h2>Our Story & Mission</h2>
+
+    <p>
+        Growing up, I constantly heard people look at polluted water and say, “I wish I could do something about it.”
+        WorldOfUs was created to turn that wish into action. Our mission is simple: to make environmental action
+        accessible to everyone, not just governments or billion-dollar organizations.
+    </p>
+
+    <p>
+        Let me ask you this: can the average person really make a major difference in protecting the environment?
+        At WorldOfUs, we believe the answer is yes.
+    </p>
+
+    <p>
+        Our product is called the Deplasticer. It’s a modular filtration device designed to remove plastic,
+        microplastics, and other debris from water. The Deplasticer allows individuals, communities, and companies
+        to take environmental cleanup into their own hands—starting with the water systems they use every day.
+    </p>
+
+    <p>
+        What makes the Deplasticer unique is its scalability. Unlike current solutions, such as the Interceptor used
+        in TeamSeas, our technology works across multiple environments. The Deplasticer comes in different sizes,
+        allowing it to clean household pipes, rivers, lakes, and even oceans.
+    </p>
+
+    <p>
+        Smaller models are affordable and compact enough to fit into tight spaces like pipes or narrow waterways,
+        while larger models are built for industrial and commercial use.
+    </p>
+
+    <p>
+        This flexibility allows us to target two major markets. On one side, everyday consumers who want to clean
+        their household water systems or local rivers. On the other, large companies and organizations that rely
+        on vast bodies of water and want sustainable, cost-effective cleanup solutions.
+    </p>
+
+    <p>
+        We plan to market smaller units through social media and online campaigns, while larger systems will be sold
+        through direct pitches to companies. All sales will occur through our website to keep costs low and maintain
+        quality control.
+    </p>
+
+    <p>
+        In terms of pricing, our production costs range from $75 for small units to $200–250 for large ones.
+        These will retail from $100 up to $300, ensuring strong margins while remaining affordable.
+    </p>
+
+    <p>
+        Our long-term goal is to become a globally recognized environmental technology company. Each Deplasticer is
+        expected to remove 10 to 30 kilograms of plastic, depending on its size and environment.
+    </p>
+
+    <p>
+        Our unique filtration layout, modular design, and strong accessibility-focused brand create a clear barrier
+        to competition.
+    </p>
+
+    <p>
+        <strong>
+        At WorldOfUs, we empower people to become environmental changemakers,
+        <b>one body of water at a time.</b>
+        </strong>
+    </p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 WorldOfUs | Last modified: January 2026
+</footer>
+
+</body>
+</html>
+
+
+

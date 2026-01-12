@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products & Services – WorldOfUs</title>
+
+<style>
+/* ---------- ROOT ---------- */
+:root {
+    --deep-ocean: #001f33;
+    --mid-ocean: #003d66;
+    --light-ocean: #0a6fa6;
+    --aqua: #4fc3f7;
+    --white: #ffffff;
+}
+
+/* ---------- GLOBAL ---------- */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(to bottom, #001f33, #0a6fa6);
+    color: var(--white);
+}
+
+a { color: var(--aqua); text-decoration: none; }
+
+/* ---------- HEADER ---------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 70px;
+    background: rgba(0,20,40,0.8);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.logo img {
+    height: 80px;
+}
+
+nav a {
+    margin-left: 30px;
+    font-weight: 600;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: var(--aqua);
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ---------- PAGE TITLE ---------- */
+.page-title {
+    text-align: center;
+    padding: 90px 20px 60px;
+}
+
+.page-title h1 {
+    font-size: 50px;
+}
+
+.page-title p {
+    font-size: 20px;
+}
+
+/* ---------- PRODUCTS GRID ---------- */
+#products-services {
+    max-width: 1200px;
+    margin: 0 auto 120px;
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.product {
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(16px);
+    border-radius: 25px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-12px);
+}
+
+.product img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.product-content {
+    padding: 30px;
+}
+
+.product-content h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: var(--aqua);
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.product-content p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.details {
+    font-size: 14px;
+    margin-top: 15px;
+    color: #d6f2ff;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #00111f;
+    font-size: 14px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+    header {
+        padding: 20px 30px;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="WorldOfUs Logo">
+        <h2>WorldOfUs</h2>
+    </a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products & Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<!-- TITLE -->
+<section class="page-title">
+    <h1>Products & Services</h1>
+    <p>Innovative solutions for cleaner water and a healthier planet.</p>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products-services">
+
+    <!-- 1 -->
+    <div class="product">
+        <img src="images/deplasticer-home.jpg" alt="Deplasticer Home Edition">
+        <div class="product-content">
+            <h3>Deplasticer – Home Edition</h3>
+            <div class="price">$100</div>
+            <p>
+                Compact modular filtration device designed for household plumbing
+                systems and small local waterways.
+            </p>
+            <div class="details">
+                <strong>Materials:</strong> Recycled stainless steel, BPA-free polymer mesh<br>
+                <strong>Removes:</strong> Plastic debris, microplastics
+            </div>
+        </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="product">
+        <img src="images/deplasticer-community.jpg" alt="Deplasticer Community Edition">
+        <div class="product-content">
+            <h3>Deplasticer – Community Edition</h3>
+            <div class="price">$200</div>
+            <p>
+                Medium-scale filtration system for rivers, lakes, and community
+                water channels.
+            </p>
+            <div class="details">
+                <strong>Materials:</strong> Marine-grade steel, modular filter panels<br>
+                <strong>Capacity:</strong> Up to 20 kg of plastic
+            </div>
+        </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="product">
+        <img src="images/deplasticer-industrial.jpg" alt="Deplasticer Industrial Edition">
+        <div class="product-content">
+            <h3>Deplasticer – Industrial Edition</h3>
+            <div class="price">$300</div>
+            <p>
+                Large-scale system designed for oceans, ports, and industrial
+                water operations.
+            </p>
+            <div class="details">
+                <strong>Materials:</strong> Industrial steel, reinforced polymer nets<br>
+                <strong>Capacity:</strong> 30+ kg plastic per unit
+            </div>
+        </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="product">
+        <img src="images/filter-cartridge.png" alt="Replacement Filter Cartridge">
+        <div class="product-content">
+            <h3>Replacement Filter Cartridge</h3>
+            <div class="price">$40</div>
+            <p>
+                Replaceable filtration cartridge compatible with all Deplasticer
+                models.
+            </p>
+            <div class="details">
+                <strong>Materials:</strong> Activated carbon, recyclable fiber mesh<br>
+                <strong>Use:</strong> Replace every 6 months
+            </div>
+        </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="product">
+        <img src="images/water-test-kit.png" alt="Water Quality Testing Kit">
+        <div class="product-content">
+            <h3>Water Quality Testing Kit</h3>
+            <div class="price">$35</div>
+            <p>
+                At-home water testing kit to measure contamination levels before
+                and after filtration.
+            </p>
+            <div class="details">
+                <strong>Tests for:</strong> Microplastics, pH, turbidity<br>
+                <strong>Includes:</strong> Test strips, guide booklet
+            </div>
+        </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="product">
+        <img src="images/installation-service.png" alt="Installation and Assessment Service">
+        <div class="product-content">
+            <h3>Environmental Assessment & Installation</h3>
+            <div class="price">$150+</div>
+            <p>
+                Professional consultation, installation, and environmental impact
+                assessment for community and industrial systems.
+            </p>
+            <div class="details">
+                <strong>Includes:</strong> Site assessment, setup, maintenance plan<br>
+                <strong>Best for:</strong> Companies & organizations
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 WorldOfUs | Last modified: 2026
+</footer>
+
+</body>
+</html>
+
